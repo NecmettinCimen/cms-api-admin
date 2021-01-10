@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { table } from 'console';
 import { ToastrService } from 'ngx-toastr';
 import { TableDataResponse } from "src/app/models/tableDataResponse";
 import { ParametersService } from 'src/app/services/parameters.service';
