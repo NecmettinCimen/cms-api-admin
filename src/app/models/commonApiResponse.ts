@@ -6,3 +6,4 @@ export interface CommonApiResponse {
     CorreletionId: string;
     Result: any;
 }
+
