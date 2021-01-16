@@ -1,3 +1,4 @@
+import { SkillsComponent } from './../../pages/skills/skills.component';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -12,6 +13,8 @@ import { MapsComponent } from '../../pages/maps/maps.component';
 import { UserProfileComponent } from '../../pages/user-profile/user-profile.component';
 import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ParametersComponent } from 'src/app/pages/parameters/parameters.component';
+import { ProjectsComponent } from 'src/app/pages/projects/projects.component';
 
 @NgModule({
   imports: [
@@ -27,7 +30,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     UserProfileComponent,
     TablesComponent,
     IconsComponent,
-    MapsComponent
+    MapsComponent,
+    ParametersComponent,
+    ProjectsComponent,
+    SkillsComponent
   ]
 })
 

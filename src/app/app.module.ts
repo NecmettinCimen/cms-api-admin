@@ -14,7 +14,6 @@ import { AppRoutingModule } from './app.routing';
 import { ComponentsModule } from './components/components.module';
 import { ToastrModule } from 'ngx-toastr';
 import { ApiInterceptor } from './interceptors/api.interceptor';
-import { ParametersComponent } from './pages/parameters/parameters.component';
 
 
 @NgModule({
@@ -31,8 +30,7 @@ import { ParametersComponent } from './pages/parameters/parameters.component';
   declarations: [
     AppComponent,
     AdminLayoutComponent,
-    AuthLayoutComponent,
-    ParametersComponent
+    AuthLayoutComponent
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
