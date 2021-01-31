@@ -3,53 +3,65 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ToastrService } from 'ngx-toastr';
 import { TableDataResponse } from "src/app/models/tableDataResponse";
-import { SkillService } from 'src/app/services/skill.service';
+import { UserService } from 'src/app/services/user.service';
+
+
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  selector: 'app-user',
+  templateUrl: './user.component.html',
+  styleUrls: ['./user.component.css']
 })
-export class SkillsComponent implements OnInit {
+export class UserComponent implements OnInit {
 
-  env:any=environment
+  env: any = environment
 
   constructor(public modalService: NgbModal,
-    private skillService: SkillService,
+    private userService: UserService,
     private toastrService: ToastrService) { }
 
   tableData: TableDataResponse = TableDataResponse.Create();
 
-  model: any = { Id: 0, Name: null, Description: null, Icon: null }
-  icon: File = null;a
+  model: any;
+
+  modelInit() {
+    this.model = Object.assign({}, { Id: 0, Name: null, SurName: null, Email: null, Password: null, Password2: null });
+  }
 
   ngOnInit(): void {
     this.GetTableData();
+    this.modelInit();
   }
 
   async GetTableData(skip: number = 0) {
-    var tableData = await this.skillService.GetAll(skip);
+    var tableData = await this.userService.GetAll(skip);
     this.tableData = TableDataResponse.Create(null, tableData, skip)
   }
 
-  handleFileInput(files: FileList) {
-    this.icon = files.item(0);
-}
+  create(content: any) {
+    this.modelInit()
+    this.modalService.open(content)
+  }
 
   edit(editModel: any, content: any) {
     this.model = Object.assign({}, editModel);
+    this.model.Password2 =this.model.Password;
+
     this.modalService.open(content);
   }
 
   async save() {
-    var result = !this.model.Id ? await this.skillService.AddAsync(this.model, this.icon)
-      : await this.skillService.UpdateAsync(this.model, this.icon);
+    if (this.model.Password != this.model.Password2)
+      return
+
+    var result = !this.model.Id ? await this.userService.AddAsync(this.model)
+      : await this.userService.UpdateAsync(this.model);
     if (result) await this.GetTableData();
     this.modalService.dismissAll();
     this.toastrService.success("Success");
   }
   async delete() {
-    var result = await this.skillService.DeleteAsync(this.model.Id)
+    var result = await this.userService.DeleteAsync(this.model.Id)
     if (result) await this.GetTableData();
     this.modalService.dismissAll();
     this.toastrService.success("Deleted!");

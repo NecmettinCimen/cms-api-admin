@@ -1,8 +1,8 @@
 import { SkillsComponent } from './../../pages/skills/skills.component';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'; import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { ClipboardModule } from 'ngx-clipboard';
 
@@ -15,6 +15,12 @@ import { TablesComponent } from '../../pages/tables/tables.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ParametersComponent } from 'src/app/pages/parameters/parameters.component';
 import { ProjectsComponent } from 'src/app/pages/projects/projects.component';
+import { ExperienceComponent } from 'src/app/pages/experience/experience.component';
+import { UserComponent } from 'src/app/pages/user/user.component';
+
+import { ContentComponent } from 'src/app/pages/content/content.component';
+import { ContenteditComponent } from 'src/app/pages/contentedit/contentedit.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   imports: [
@@ -23,7 +29,8 @@ import { ProjectsComponent } from 'src/app/pages/projects/projects.component';
     FormsModule,
     HttpClientModule,
     NgbModule,
-    ClipboardModule
+    ClipboardModule,
+    MarkdownModule.forRoot(),
   ],
   declarations: [
     DashboardComponent,
@@ -33,8 +40,12 @@ import { ProjectsComponent } from 'src/app/pages/projects/projects.component';
     MapsComponent,
     ParametersComponent,
     ProjectsComponent,
-    SkillsComponent
+    SkillsComponent,
+    ExperienceComponent,
+    UserComponent,
+    ContentComponent,
+    ContenteditComponent
   ]
 })
 
-export class AdminLayoutModule {}
+export class AdminLayoutModule { }

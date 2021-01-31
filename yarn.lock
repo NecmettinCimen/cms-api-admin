@@ -1258,6 +1258,11 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
   integrity sha512-3c+yGKvVP5Y9TYBEibGNR+kLtijnj7mYrXRg+WpFb2X9xm04g/DXYkfg4hmzJQosc9snFNUPkbYIhu+KAm6jJw==
 
+"@types/marked@^1.1.0":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@types/marked/-/marked-1.2.1.tgz#9864ecc10d0edb72e7be4e94acb5fcc607c15eed"
+  integrity sha512-d5adCgRHB+NAme23hkiTkvpfZUDqoNtL2Sr2nZBJqSj3zyHLxsfFWsGQ2sK2z9aX6L1xkJzon2c0jTPcsEjpaQ==
+
 "@types/minimatch@*":
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
@@ -2443,7 +2448,7 @@ cli-width@^3.0.0:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-3.0.0.tgz#a2f48437a2caa9a22436e794bf071ec9e61cedf6"
   integrity sha512-FxqpkPPwu1HjuN93Omfm4h8uIanXofW0RxVEW3k5RKx+mJJYSthzNhp32Kzxxy3YAEZ/Dc/EWN1vZRY0+kOhbw==
 
-clipboard@2.0.6:
+clipboard@2.0.6, clipboard@^2.0.0:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.6.tgz#52921296eec0fdf77ead1749421b21c968647376"
   integrity sha512-g5zbiixBRk/wyKakSwCKd7vQXDjFnAMGHoEyBogG/bw9kTD9GvdAvaoRR1ALcEzt3pVKxZR0pViekPMIS0QyGg==
@@ -2583,7 +2588,7 @@ combined-stream@^1.0.6, combined-stream@~1.0.6:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@^2.11.0, commander@^2.12.1, commander@^2.20.0:
+commander@^2.11.0, commander@^2.12.1, commander@^2.19.0, commander@^2.20.0:
   version "2.20.3"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
   integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
@@ -3402,6 +3407,11 @@ emoji-regex@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-8.0.0.tgz#e818fd69ce5ccfcb404594f842963bf53164cc37"
   integrity sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==
+
+emoji-toolkit@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/emoji-toolkit/-/emoji-toolkit-6.0.1.tgz#7dec51f79dd44863d86c647a805ebc41cea82a5a"
+  integrity sha512-QZZq0beHg753JxcBt89UBFqzwYNuMtXhNO+jY3viSAndewmn9biTE5glaro1RA0uWJ4hKqw4k1Mboe1M6sGkMA==
 
 emojis-list@^2.0.0:
   version "2.1.0"
@@ -5278,6 +5288,13 @@ karma@5.2.3:
     ua-parser-js "0.7.22"
     yargs "^15.3.1"
 
+katex@^0.12.0:
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/katex/-/katex-0.12.0.tgz#2fb1c665dbd2b043edcf8a1f5c555f46beaa0cb9"
+  integrity sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg==
+  dependencies:
+    commander "^2.19.0"
+
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -5536,6 +5553,11 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+marked@^1.2.0:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-1.2.8.tgz#5008ece15cfa43e653e85845f3525af4beb6bdd4"
+  integrity sha512-lzmFjGnzWHkmbk85q/ILZjFoHHJIQGF+SxGEfIdGk/XhiTPhqGs37gbru6Kkd48diJnEyYwnG67nru0Z2gQtuQ==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -5888,6 +5910,25 @@ ngx-clipboard@13.0.1:
   integrity sha512-e7QBsw7bX5ajhVR2++NAaYZYw90hKeEBlb006TW85WDUA3kmlrXpMDwOvVJuRewU6Nh+U1QiQMJq5a0ivk0zWg==
   dependencies:
     ngx-window-token ">=3.0.0"
+
+ngx-markdown-editor@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/ngx-markdown-editor/-/ngx-markdown-editor-3.3.1.tgz#f546c7cbeb7aafe21a8a7923dc27216c912e3532"
+  integrity sha512-7jEObycXSObvGPOIuRaCCETnXjCEzq5iUJlnTuljp9c3kVcuvNz9s+oAmwtIibVoZQsW1nUNiddrQbQFBC2MUg==
+  dependencies:
+    tslib "^2.0.0"
+
+ngx-markdown@^11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/ngx-markdown/-/ngx-markdown-11.0.1.tgz#e6977d52feb4a7487fbfb253e2dc824fdc10a6d3"
+  integrity sha512-/abng+e19947ZAhEzFl7n1J+KZbrrO2O6gSUtyT3x5I5CHXQPZxZ0SawlZ2Yyu8UNjI75xmemU+7pArKyrOtOg==
+  dependencies:
+    "@types/marked" "^1.1.0"
+    emoji-toolkit "^6.0.1"
+    katex "^0.12.0"
+    marked "^1.2.0"
+    prismjs "^1.22.0"
+    tslib "^2.0.0"
 
 ngx-toastr@13.0.0:
   version "13.0.0"
@@ -6938,6 +6979,13 @@ prepend-http@^1.0.0:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw=
+
+prismjs@^1.22.0:
+  version "1.23.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.23.0.tgz#d3b3967f7d72440690497652a9d40ff046067f33"
+  integrity sha512-c29LVsqOaLbBHuIbsTxaKENh1N2EQBOHaWv7gkHN4dgRbxSREqDnDbtFJYdpPauS4YCplMSNCABQ6Eeor69bAA==
+  optionalDependencies:
+    clipboard "^2.0.0"
 
 process-nextick-args@~2.0.0:
   version "2.0.1"
