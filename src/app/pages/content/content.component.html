@@ -34,8 +34,10 @@
                 <td>{{item.Category}}</td>
                 <td>{{item.Date |date:'dd.MM.yyyy'}}</td>
                 <td>
-                  <button type="button" class="btn btn-secondary" [routerLink]="['/contentedit',{queryParams:item.Id}]">Edit</button>
-                  <button type="button" (click)="modelId = item.Id;modalService.open(deletemodal)" class="btn btn-outline-danger" >Remove</button>
+                  <button type="button" class="btn btn-secondary"
+                    [routerLink]="['/contentedit']" [queryParams]="{ Id: item.Id}">Edit</button>
+                  <button type="button" (click)="modelId = item.Id;modalService.open(deletemodal)"
+                    class="btn btn-outline-danger">Remove</button>
                 </td>
               </tr>
             </tbody>

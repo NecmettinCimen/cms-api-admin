@@ -20,7 +20,7 @@ import { UserComponent } from 'src/app/pages/user/user.component';
 
 import { ContentComponent } from 'src/app/pages/content/content.component';
 import { ContenteditComponent } from 'src/app/pages/contentedit/contentedit.component';
-import { MarkdownModule } from 'ngx-markdown';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 
 @NgModule({
   imports: [
@@ -30,7 +30,7 @@ import { MarkdownModule } from 'ngx-markdown';
     HttpClientModule,
     NgbModule,
     ClipboardModule,
-    MarkdownModule.forRoot(),
+    AngularEditorModule ,
   ],
   declarations: [
     DashboardComponent,
